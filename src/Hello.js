@@ -1,0 +1,34 @@
+import React, { Component } from 'react';
+
+//클래스형 컴포넌트
+class Hello extends Component {
+    static defaultProps = {
+        name: '이름없음'
+    }
+    render() {
+        const { color, isSpecial, name } = this.props;
+        return (
+            <div style={{color}}>
+                {isSpecial && <b>*</b>}
+                안녕하세요 {name}
+            </div>
+        )
+    }
+}
+// function Hello({color, name, isSpecial}) {
+//     return (
+//         <div style={{
+//             color
+//         }}>
+//             {/*{isSpecial ? <b>*</b> : null}*/}
+//             {isSpecial && <b>*</b>}
+//             {/*<b>{isSpecial? '스페셜하다!' : '낫스페셜'}</b>*/}
+//             안녕하세요 {name}
+//         </div> //JSX
+//     );
+// }
+
+Hello.defaultProps = {
+    name: '이름없음'
+};
+export default Hello;
