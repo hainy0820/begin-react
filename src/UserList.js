@@ -15,7 +15,7 @@ const User = React.memo(function User({user/*, onRemove, onToggle*/}) {
     }, [user]);*/ //값이 설정되거나 바뀔 때마다 호출됨
     /*useEffect(() => {
         console.log('컴포넌트가 화면에 나타남');
-        // props -> sate
+        // props -> state
         // REST API
         // D3 Video.js
         // setInterval, setTimeout
@@ -24,7 +24,7 @@ const User = React.memo(function User({user/*, onRemove, onToggle*/}) {
             // 라이브러리 인스턴스 제거
             console.log('컴포넌트가 화면에서 사라짐');
         };
-    }, []);*/
+    }, []); //deps: dependency, 의존되는 값들을 넣어줌, 비어있으면 컴포넌트가 처음 화면에 나타날 때에만 호출됨*/
     return (
         <div>
             <b

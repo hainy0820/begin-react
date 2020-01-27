@@ -1,7 +1,7 @@
 import React, {useState, Component} from 'react';
 
 class Counter extends Component {
-    //정식 js 문법은 아니고 클래스 프로퍼티스 바벨 플러그인을 통해서 사용할 수 있는 문법
+    //정식 js 문법은 아니고 클래스 프로퍼티스, 바벨 플러그인을 통해서 사용할 수 있는 문법
     state = {
         counter: 0,
         fixed: 1,

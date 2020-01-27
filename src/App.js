@@ -4,7 +4,7 @@ import UserList from './UserList';
 import CreateUser from './CreateUser';
 import useInputs from './useInputs';
 
-//Chrome에서 사용할 때
+//Chrome에서 사용할 때 (immer 라이브러리 사용)
 //window.produce = produce;
 
 function countActiveUsers(users) {
@@ -85,6 +85,8 @@ function reducer(state, action) {
 }
 
 export const UserDispatch = createContext(null);
+//null: 기본값 없음
+//UserDispatch 안의 Provider 컴포넌트 사용
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -108,7 +110,8 @@ function App() {
     });
     nextId.current += 1;
     reset();
-  }, [username, email, reset]); //reset 안 넣어줘도 되지만 eslint 규칙 사항으로는 넣어줘야 함
+  }, [username, email, reset]);
+  //reset 안 넣어줘도 되지만 커스텀 훅에서 반환한 것이기 때문에, eslint 규칙 사항으로는 넣어줘야 함
 
   //const {username, email} = state.inputs;
 

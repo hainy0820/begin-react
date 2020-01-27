@@ -13,6 +13,7 @@ function reducer(state, action) {
 
 function Counter2() {
     const [number, dispatch] = new useReducer(reducer, 0);
+    //0 : useReducer에서 사용하고 싶은 초기값
 
     const onIncrease = () => {
         dispatch({
